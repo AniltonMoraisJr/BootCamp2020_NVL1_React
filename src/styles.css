@@ -10,7 +10,11 @@ body {
 
 div {
   width: 100%;
-  margin: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
 div li {
