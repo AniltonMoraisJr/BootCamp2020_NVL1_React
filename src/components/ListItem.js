@@ -7,7 +7,7 @@ const ListItem = ({ data }) => {
   const { handleRemoveRepository } = useContext(ListContext);
   return (
     <li>
-        {data.title}
+        <span>{data.title}</span>
         <button onClick={() => handleRemoveRepository(data.id)}>
           Remover
         </button>

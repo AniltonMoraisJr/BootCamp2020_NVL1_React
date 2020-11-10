@@ -48,16 +48,12 @@ const List = () => {
     }, []);
     
     return (
-      <>
-        <ul data-testid="repository-list">
-          <ListContext.Provider value={{handleRemoveRepository}}>
-              {repositoriesList.length === 0 ? null : 
-                  repositoriesList.map(repo => (<ListItem  key={repo.id} data={repo} />))
-              }
-          </ListContext.Provider>
-        </ul>
-        <button onClick={handleAddRepository}>Adicionar</button>
-      </>
+      <ListContext.Provider value={{handleRemoveRepository}}>
+          <ul data-testid="repository-list">
+              {repositoriesList.map(repo => (<ListItem  key={repo.id} data={repo} />))}
+          </ul>
+          <button onClick={handleAddRepository}>Adicionar</button>
+      </ListContext.Provider>
     );
 }
 
